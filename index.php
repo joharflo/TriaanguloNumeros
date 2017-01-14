@@ -12,6 +12,9 @@
      ***********************************************
      -->
 
+
+//dibujamos un pequeño formulario para pedir el numero de filas.
+
 <form action="index.php" method="post" name="filas" >
 <table align="center">
   <tr><td align="center">Numero de Filas</td></tr>
@@ -43,22 +46,32 @@
 </form>
 
 <?php 
- if (!$_POST){
-  echo "A la espera de numero de filas";
-      
-    }
- if ($_POST){
-  $vectorNumeros = array(0,1,2,3,4,5,6,7,8,9);
-  $numeroFilas=$_POST['numFilas'];
-  $numeroColumnas=$numeroFilas*2-1;
 
- echo "<table align='center' border='0'>";
+//Si no se ha enviado le numero de filas da este mensaje
+ if (!$_POST){
+  echo "A la espera de numero de filas";      
+    }
+
+ // luego de de enviar el numero de filas entramos en esta condicion   
+ if ($_POST){
+  $vectorNumeros = array(0,1,2,3,4,5,6,7,8,9);// vector de ayuda para imprimir los numeros del triangulo
+  $numeroFilas=$_POST['numFilas']; //recibimos el numero de filas
+  $numeroColumnas=$numeroFilas*2-1; // calculamos el numero de columnas
+
+// dibujamos la tabla sin borde en cada celda va un numero correspondiente
+
+ echo "<table align='center' border='0'>"; 
 
   for ($i=1; $i < $numeroFilas+1; $i++) {
-    echo "<tr>"; 
+    
+    echo "<tr>";// dibujamos la fila
+
     for ($j=1; $j <$numeroColumnas+1 ; $j++) { 
+
+      //OJO aqui determinamos si la celda queda vacia o lleva un numero
       if ((($i+$j)>=($numeroColumnas-$numeroFilas+2)) and (($j-$i)<$numeroFilas)){
         $numMuestra=substr(($i*2-1), -1);
+        
         if ($j==$numeroFilas) {
           echo "<td><h4>".$numMuestra."</h4></td>"; 
         }else{
