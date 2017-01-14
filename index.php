@@ -13,7 +13,7 @@
      -->
 
 
-//dibujamos un pequeño formulario para pedir el numero de filas.
+<!--dibujamos un pequeño formulario para pedir el numero de filas.-->
 
 <form action="index.php" method="post" name="filas" >
 <table align="center">
