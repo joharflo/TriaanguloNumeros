@@ -54,7 +54,7 @@
 
  // luego de de enviar el numero de filas entramos en esta condicion   
  if ($_POST){
-  $vectorNumeros = array(0,1,2,3,4,5,6,7,8,9);// vector de ayuda para imprimir los numeros del triangulo
+  
   $numeroFilas=$_POST['numFilas']; //recibimos el numero de filas
   $numeroColumnas=$numeroFilas*2-1; // calculamos el numero de columnas
 
