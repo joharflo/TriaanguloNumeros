@@ -78,7 +78,7 @@
           $movVector=substr(abs($numeroFilas-$j),-1);
           $indiceVector=$numMuestra-$movVector;
           if ($indiceVector<0){$indiceVector=$indiceVector+10;}
-          $numMuestra=$vectorNumeros[$indiceVector];
+          $numMuestra=$indiceVector;
           echo "<td><h4>".$numMuestra."</h4></td>";
         }               
       }else{
