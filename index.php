@@ -1,3 +1,17 @@
+<!-- ***********************************************
+     *                                             *
+     *                                             *
+     *                                             *
+     *                                             *
+     *       Hecho por Johnny Armando Florez       *
+     *       Twitter: @joharflo                    *
+     *       Faecbook: /joharflo                   *
+     *       GitHub:  joharflo                     *
+     *                                             *
+     *                                             *
+     ***********************************************
+     -->
+
 <form action="index.php" method="post" name="filas" >
 <table align="center">
   <tr><td align="center">Numero de Filas</td></tr>
